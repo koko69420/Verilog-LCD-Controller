@@ -51,6 +51,34 @@ Verilog-LCD-Controller/
 └── README.md                         # Project documentation
 ```
 
+## Simulation Waveforms & Verification
+
+The behavior of the LCD controller state machine, character generator, and scroll sequencer was validated in Xilinx ISim:
+
+### Waveform 1: LCD Initialization Sequence (`O1.png`)
+Captures the asynchronous reset and initial command sequence sent to the HD44780 controller (`lcd_rs = 0`):
+<p align="center">
+  <img src="O1.png" alt="LCD Initialization Simulation Waveform" width="750">
+</p>
+
+### Waveform 2: Character ASCII Data Write Execution (`O2.png`)
+Shows character data bus transfers (`lcd_data[7:0]`) with Register Select (`lcd_rs = 1`) and Enable strobe assertion (`lcd_en`):
+<p align="center">
+  <img src="O2.png" alt="Character Data Write Waveform" width="750">
+</p>
+
+### Waveform 3: Custom Glyph & Display Addressing (`O3.png`)
+Illustrates addressing operations and character memory pointer incrementing:
+<p align="center">
+  <img src="O3.png" alt="Character Addressing Waveform" width="750">
+</p>
+
+### Waveform 4: Continuous Horizontal Scrolling Marquee (`O4.png`)
+Displays cyclical buffer shifts generating the dynamic "Hello World!" marquee across the 16-character display window:
+<p align="center">
+  <img src="O4.png" alt="Horizontal Scrolling Simulation Waveform" width="750">
+</p>
+
 ---
 
 ## Simulation & Synthesis Workflow
