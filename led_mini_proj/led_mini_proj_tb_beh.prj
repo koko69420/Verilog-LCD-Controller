@@ -1,0 +1,3 @@
+verilog work "led_mini_proj.v"
+verilog work "led_mini_proj_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

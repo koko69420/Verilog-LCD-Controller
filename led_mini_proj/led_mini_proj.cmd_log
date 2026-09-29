@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/kausthubh/Verilog/led_mini_proj/led_mini_proj.xst" -ofn "/home/kausthubh/Verilog/led_mini_proj/led_mini_proj.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 led_mini_proj.ngc led_mini_proj.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o led_mini_proj_map.ncd led_mini_proj.ngd led_mini_proj.pcf 
+vhdtdtfi -lib work /home/kausthubh/Verilog/led_mini_proj/led_mini_proj.v -lang verilog -prj led_mini_proj -o led_mini_proj.spl -module led_mini_proj -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 led_mini_proj.spl /home/kausthubh/Verilog/led_mini_proj/led_mini_proj.sym 

@@ -1,0 +1,11 @@
+[Inputs]
+clk
+reset
+[Outputs]
+lcd_rs
+lcd_en
+=lcd_data[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel led_mini_proj
+

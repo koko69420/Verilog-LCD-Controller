@@ -1,0 +1,24 @@
+# Xilinx ISE & ISim artifacts
+isim/
+_ngo/
+_xmsgs/
+xlnx_auto_*
+*.xrpt
+*.mrp
+*.ngd
+*.ngr
+*.lso
+*.sdb
+*.exe
+*.didat
+*.o
+*.cmd
+*.log
+
+# MS Office Lock files
+~$*
+
+# OS & Editor
+*~
+*.swp
+.DS_Store
